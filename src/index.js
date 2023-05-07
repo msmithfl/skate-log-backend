@@ -13,7 +13,11 @@ const apiKey = process.env.MONGO_DB_URI;
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "https://skate-log.onrender.com"],
+  })
+);
 
 app.use("/auth", userRouter);
 app.use("/tricks", tricksRouter);
