@@ -20,4 +20,6 @@ app.use("/tricks", tricksRouter);
 
 mongoose.connect(`${apiKey}`);
 
-app.listen(8000, () => console.log("SERVER STARTED!"));
+const port = process.env.PORT || 8000;
+
+app.listen(port, () => console.log("SERVER STARTED!"));
