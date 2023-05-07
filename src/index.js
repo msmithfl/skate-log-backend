@@ -20,4 +20,4 @@ app.use("/tricks", tricksRouter);
 
 mongoose.connect(`${apiKey}`);
 
-app.listen(3001, () => console.log("SERVER STARTED!"));
+app.listen(8000, () => console.log("SERVER STARTED!"));
